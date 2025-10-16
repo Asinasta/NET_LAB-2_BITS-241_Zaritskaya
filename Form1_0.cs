@@ -16,13 +16,11 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
         {
             InitializeComponent();
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Hide();
@@ -35,7 +33,6 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
                     Close(); 
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
@@ -48,7 +45,6 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
                     Close(); 
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Hide();
@@ -61,7 +57,6 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
                     Close();
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Hide();

@@ -35,7 +35,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label_a = new System.Windows.Forms.Label();
             this.label_b = new System.Windows.Forms.Label();
-            this.label_z = new System.Windows.Forms.Label();
+            this.label_с = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label_result = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(25, 40);
+            this.label1.Location = new System.Drawing.Point(35, 40);
             this.label1.MaximumSize = new System.Drawing.Size(400, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 60);
@@ -110,16 +110,16 @@
             this.label_b.TabIndex = 9;
             this.label_b.Text = "b";
             // 
-            // label_z
+            // label_с
             // 
-            this.label_z.AutoSize = true;
-            this.label_z.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_z.Location = new System.Drawing.Point(72, 311);
-            this.label_z.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label_z.Name = "label_z";
-            this.label_z.Size = new System.Drawing.Size(18, 20);
-            this.label_z.TabIndex = 10;
-            this.label_z.Text = "c";
+            this.label_с.AutoSize = true;
+            this.label_с.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_с.Location = new System.Drawing.Point(72, 311);
+            this.label_с.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label_с.Name = "label_с";
+            this.label_с.Size = new System.Drawing.Size(18, 20);
+            this.label_с.TabIndex = 10;
+            this.label_с.Text = "c";
             // 
             // button1
             // 
@@ -149,12 +149,12 @@
             // 
             this.label_result.AutoSize = true;
             this.label_result.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_result.Location = new System.Drawing.Point(480, 208);
+            this.label_result.Location = new System.Drawing.Point(480, 163);
             this.label_result.Margin = new System.Windows.Forms.Padding(99, 0, 99, 0);
             this.label_result.Name = "label_result";
-            this.label_result.Size = new System.Drawing.Size(244, 120);
+            this.label_result.Size = new System.Drawing.Size(247, 120);
             this.label_result.TabIndex = 13;
-            this.label_result.Text = "Результат вычислений:\r\n\r\nДля начала введите x, y, z\r\n\r\n\r\n\r\n";
+            this.label_result.Text = "Результат вычислений:\r\n\r\nДля начала введите a, b, c\r\n\r\n\r\n\r\n";
             // 
             // Form1_3
             // 
@@ -164,7 +164,7 @@
             this.Controls.Add(this.label_result);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label_z);
+            this.Controls.Add(this.label_с);
             this.Controls.Add(this.label_b);
             this.Controls.Add(this.label_a);
             this.Controls.Add(this.textBox3);
@@ -192,7 +192,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label_a;
         private System.Windows.Forms.Label label_b;
-        private System.Windows.Forms.Label label_z;
+        private System.Windows.Forms.Label label_с;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label_result;

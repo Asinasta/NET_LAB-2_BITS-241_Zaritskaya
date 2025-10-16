@@ -16,10 +16,8 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
         {
             InitializeComponent();
         }
-
         private void Task1_Click(object sender, EventArgs e)
         {
-
             Hide();
             using (Form1_0 form1_0 = new Form1_0())
             {
