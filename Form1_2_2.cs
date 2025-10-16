@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NET_LAB_2_BITS_241_Zaritskaya
 {
-    public partial class Form1_1 : Form
+    public partial class Form1_2_2 : Form
     {
-        public Form1_1()
+        public Form1_2_2()
         {
             InitializeComponent();
         }
@@ -26,13 +26,13 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
         {
             var box = sender as System.Windows.Forms.TextBox;
             if (box == null) { return; }
-            if (!double.TryParse(box.Text, out _)) // если не число
+            if (double.TryParse(box.Text, out double value))
             {
-                box.BackColor = Color.Red;
+                box.BackColor = value <= 0 ? Color.Red : SystemColors.Window;
             }
             else
             {
-                box.BackColor = SystemColors.Window;
+                box.BackColor = Color.Red;
             }
         }
         private void textBox_Check(object sender, EventArgs e)
@@ -46,27 +46,50 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
                 }
                 if (double.TryParse(box.Text, out double value))
                 {
-                    box.BackColor = SystemColors.Window; // число
+                    if (value > 0){  box.BackColor = SystemColors.Window; } // число больше нуля
                 }
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double x) &&
-                double.TryParse(textBox2.Text, out double y) &&
-                double.TryParse(textBox3.Text, out double z))
+            if (double.TryParse(textBox1.Text, out double a) &&
+                double.TryParse(textBox2.Text, out double h))
             {
-                double a = (2 + x) * ((1 + y / (x * x + 3)) / (y * y + 1.0 / (z * z + 4)));
-                double b = Math.Pow(1 + Math.Pow(Math.Tan(x / 2), 2), 2);
-                label_result.Text = $"Результат вычислений:\n\na = {a:F5}, b = {b:F5}";
+                if (a < 0 || h < 0)
+                {
+                    textBox_TextInvalid(textBox1, e);
+                    textBox_TextInvalid(textBox2, e);
+                    MessageBox.Show("Основание и высота должны быть положительными числами.", "Ошибка",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (a == 0 || h == 0)
+                {
+                    textBox_TextInvalid(textBox1, e);
+                    textBox_TextInvalid(textBox2, e);
+                    MessageBox.Show("Треугольника с таким основанием и/или высотой не существует.", "Ошибка",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                double S = 0.5 * a * h;
+
+                if (S <= 0)
+                {
+                    MessageBox.Show("Такого треугольника не существует.", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                label_result.Text = $"Площадь треугольника: {S:F2}";
             }
             else
             {
                 textBox_TextInvalid(textBox1, e);
                 textBox_TextInvalid(textBox2, e);
-                textBox_TextInvalid(textBox3, e);
                 MessageBox.Show("Введите корректные числа во все поля!", "Ошибка ввода",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -77,9 +100,6 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
         {
             textBox_Check(textBox2, e);
         }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            textBox_Check(textBox3, e);
-        }
     }
 }
+

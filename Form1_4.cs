@@ -17,16 +17,51 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
         {
             InitializeComponent();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();
         }
-
+        private void textBox_TextInvalid(object sender, EventArgs e)
+        {
+            var box = sender as System.Windows.Forms.TextBox;
+            if (box == null) { return; }
+            if (!double.TryParse(box.Text, out _)) // если не число
+            {
+                box.BackColor = Color.Red;
+            }
+            else
+            {
+                box.BackColor = SystemColors.Window;
+            }
+            if (double.TryParse(box.Text, out double value))
+            {
+                if (value < 0 || value > 9) // диапазон 0–9
+                {
+                    box.BackColor = Color.Red;
+                }
+            }
+        }
+        private void textBox_Check(object sender, EventArgs e)
+        {
+            var box = sender as System.Windows.Forms.TextBox;
+            if (box != null)
+            {
+                if (string.IsNullOrWhiteSpace(box.Text))
+                {
+                    box.BackColor = SystemColors.Window; // пустое поле
+                }
+                if (double.TryParse(box.Text, out double value))
+                {
+                    if (value >= 0 && value <= 9) // диапазон 0–9
+                    {
+                        box.BackColor = SystemColors.Window; // число
+                    }
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            // Попытка считать цифру из TextBox
             if (double.TryParse(textBox1.Text, out double digit))
             {
                 switch (digit)
@@ -41,20 +76,23 @@ namespace NET_LAB_2_BITS_241_Zaritskaya
                     case 7: label_result.Text = "семь"; break;
                     case 8: label_result.Text = "восемь"; break;
                     case 9: label_result.Text = "девять"; break;
-                    default: label_result.Text = "Неверный ввод.\nВведите цифру от 0 до 9."; break;
+                    default: 
+                        textBox_TextInvalid(textBox1, e); 
+                        label_result.Text = "Неверный ввод.\nВведите цифру от 0 до 9."; 
+                        break;
                 }
 
             }
             else
             {
-                MessageBox.Show("Введите корректные значение в поле!", "Ошибка ввода",
+                textBox_TextInvalid(textBox1, e);
+                MessageBox.Show("Введите корректное значение в поле!", "Ошибка ввода",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox_Check(textBox1, e);
         }
     }
 }

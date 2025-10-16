@@ -182,7 +182,6 @@
             this.MinimumSize = new System.Drawing.Size(850, 500);
             this.Name = "Form1_1";
             this.Text = "Задание 1.1";
-            this.Load += new System.EventHandler(this.Form1_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
