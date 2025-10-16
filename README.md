@@ -26,7 +26,11 @@
 *(Рисунок 1 – Формулы для задания №1)*
 
 > ```markdown
-> ![Формулы для задания №1](Resources/Lab2_net.jpg)
+> <p align="center">
+  <img src="Resources/Lab2_net.jpg" alt="Формулы для задания №1" width="500"/>
+  <br>
+  <em>Рисунок 1 – Формулы для задания №1</em>
+</p>
 > ```
 
 ---
