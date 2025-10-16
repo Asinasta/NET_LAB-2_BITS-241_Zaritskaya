@@ -25,9 +25,8 @@
 
 *(Рисунок 1 – Формулы для задания №1)*
 
-> 💡 *Здесь можно вставить изображение формул, если оно есть:*  
 > ```markdown
-> ![Формулы для задания №1](C:\Users\azari\Source\Repos\NET_LAB-2_BITS-241_Zaritskaya\Resources\Lab2_net.jpg)
+> [Формулы для задания №1]([C:\Users\azari\Source\Repos\NET_LAB-2_BITS-241_Zaritskaya\Resources\Lab2_net.jpg](https://github.com/Asinasta/NET_LAB-2_BITS-241_Zaritskaya/blob/master/Resources/Lab2_net.jpg))
 > ```
 
 ---
