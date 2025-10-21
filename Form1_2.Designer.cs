@@ -39,9 +39,10 @@
             this.button3.AutoSize = true;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(0, 224);
+            this.button3.Location = new System.Drawing.Point(0, 182);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(800, 112);
+            this.button3.Size = new System.Drawing.Size(600, 91);
             this.button3.TabIndex = 7;
             this.button3.Text = "3. Через две стороны и угол между ними (стороны a, b, угол А в градусах)";
             this.button3.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             this.button2.AutoSize = true;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(0, 112);
+            this.button2.Location = new System.Drawing.Point(0, 91);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(800, 112);
+            this.button2.Size = new System.Drawing.Size(600, 91);
             this.button2.TabIndex = 6;
             this.button2.Text = "2. Через основание и высоту (a - основание, h - высота)";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,8 +68,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(800, 112);
+            this.button1.Size = new System.Drawing.Size(600, 91);
             this.button1.TabIndex = 5;
             this.button1.Text = "1. Формула Герона (a, b, c - стороны)";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,9 +81,10 @@
             this.button6.AutoSize = true;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(0, 336);
+            this.button6.Location = new System.Drawing.Point(0, 273);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(800, 112);
+            this.button6.Size = new System.Drawing.Size(600, 91);
             this.button6.TabIndex = 10;
             this.button6.Text = "Назад";
             this.button6.UseVisualStyleBackColor = true;
@@ -88,17 +92,18 @@
             // 
             // Form1_2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1_2";
-            this.Text = "Form1_2";
+            this.Text = "Задание 1.2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
